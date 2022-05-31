@@ -1,0 +1,84 @@
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  font-family: "Roboto Condensed", sans-serif;
+}
+.modalContent {
+  /*grid-template-columns: 20vw 30vw 30vw 20vw;
+  grid-template-rows: 40vh 20vh 40vh;*/
+  /* display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 5% 90% 5%;
+  grid-template-areas:
+    "modalHead modalHead"
+    "current add"
+    "currentFoot addFoot"; */
+  font-size: 300%;
+  background-color: #fefefe;
+  text-align: center;
+  margin-left: 10%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  height: 50%;
+}
+.modalClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modalClose:hover,
+.modalClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.current {
+  grid-area: current;
+  border: 1px solid red;
+  font-size: 200%;
+  text-align: center;
+  width: 50%;
+  margin-top: 40px;
+}
+
+button {
+  padding: 20%;
+  font-size: 60%;
+  margin-top: 40px;
+}
+
+.add {
+  grid-area: add;
+  border: 1px solid green;
+}
+
+.currentFoot {
+  grid-area: currentFoot;
+  border: 1px solid blue;
+}
+.addFoot {
+  grid-area: addFoot;
+  border: 1px solid purple;
+}
+
+.modalHead {
+  grid-area: modalHead;
+  border: 1px solid yellow;
+}
+
+.fieldItem:hover {
+  background-color: grey;
+  cursor: pointer;
+}
