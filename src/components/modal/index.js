@@ -10,8 +10,10 @@ function Modal({
   addToField,
   setAddToField,
   updateScore,
+  setLoadedScore,
+  scoreInput,
+  setScoreInput,
 }) {
-  const [scoreInput, setScoreInput] = useState("");
   function closeModal() {
     const modal = document.getElementById(editField + "Modal");
     const span = document.getElementsByClassName(css.modalClose)[0];
@@ -69,6 +71,7 @@ function Modal({
       modal.style.display = "block";
     } else {
       setScoreInput("");
+      setLoadedScore(scoreInput);
       updateScore(editField, input);
       closeModal();
     }
